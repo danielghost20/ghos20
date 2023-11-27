@@ -1,0 +1,23 @@
+---
+interface Props {
+	title: string;
+	body: string;
+	href: string;
+	image: any
+}
+import { Image } from 'astro:assets';
+import arrow from '../icons/arrow.svg'
+
+const { href, title, body, image } = Astro.props;
+---
+
+<div class="w-64 p-3 relative rounded-md border-2 border-gray-600 justify-start items-start flex gap-2 bg-[#313131]">
+	<Image class='rounded-full w-14 h-14 object-cover' src={image} alt='profile_image' />
+	<div class="text-white">
+		<h2 class="text-lg font-semibold text-gray-200">{title}</h2>
+		<span class="text-sm font-medium text-gray-500">{body}</span>
+	</div>
+	<a href={href} target="_blank">
+		<Image class="w-5 h-5 absolute right-2 top-2 hover:right-1 hover:top-1 duration-300"  src={arrow} alt='icon-arrow'/>
+	</a>
+</div>

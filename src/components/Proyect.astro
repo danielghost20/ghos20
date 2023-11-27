@@ -1,0 +1,20 @@
+---
+interface Props {
+    title: string
+    content: string,
+    link: string,
+}
+
+import arrow from '../icons/arrow.svg'
+import { Image } from 'astro:assets'
+
+const {title, content, link} = Astro.props
+---
+
+<div class="w-full relative p-4 rounded-md bg-[#313131] border-2 border-gray-700 flex flex-col">
+        <h2 class="text-xl font-semibold text-gray-200">{title}</h2>
+        <p class="text-base font-semibold text-gray-500">{content}</p>
+        <a href={link} target="_blank">
+            <Image class="w-5 h-5 absolute right-2 top-2 hover:right-1 hover:top-1 duration-300"  src={arrow} alt='icon-arrow'/>
+        </a>
+</div>

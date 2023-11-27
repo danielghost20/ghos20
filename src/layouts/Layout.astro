@@ -1,0 +1,79 @@
+---
+interface Props {
+  title: string;
+}
+
+import Icon, { Sprite } from "astro-icon";
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="lg:flex justify-center gap-2 items-start w-full">
+    <header class="max-w-max w-full mt-20">
+      <ul
+      class="flex flex-col justify-start p-2  gap-4 text-white font-semibold text-lg"
+        >
+        <li>
+          <a href="/" class="p-2 rounded-md bg-gray-900 border-2 border-gray-800">Home</a>
+        </li>
+        <li>
+          <a href="/work" class="p-2 rounded-md  border-2 border-transparent">Trabajo</a>
+        </li>
+        <li>
+          <a class="p-2 rounded-md  border-2 border-transparent">Contacto</a>
+        </li>
+      </ul>
+    </header>
+    <Sprite.Provider>
+      <div>
+        <slot />
+        <footer class="text-white mt-5 max-w-3xl m-auto mb-10">
+          <div class="mt-3 flex gap-4">
+            <a href="https://www.linkedin.com/in/daniel-ramos21/" class="flex gap-3  max-w-max items-center">Seguir linkedIn <Icon name="arrow" class="w-5 h-5" /></a>
+            <a href="mailto:daniel21develop@gmail.com" class="flex gap-3  max-w-max items-center">Enviar un correo <Icon name="arrow" class="w-5 h-5" /></a>
+          </div>
+        </footer>
+      </div>
+    </Sprite.Provider>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      rgb(var(--accent-light)) 30%,
+      white 60%
+    );
+  }
+  html {
+    font-family: system-ui, sans-serif;
+    background: #13151a;
+    background-size: 224px;
+  }
+  code {
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      Liberation Mono,
+      DejaVu Sans Mono,
+      Bitstream Vera Sans Mono,
+      Courier New,
+      monospace;
+  }
+</style>

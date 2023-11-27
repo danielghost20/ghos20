@@ -1,0 +1,14 @@
+---
+import { Image } from 'astro:assets';
+interface Props {
+    svg: any
+}
+
+const {svg} = Astro.props
+---
+
+
+
+<div class="w-20 h-9 flex items-center justify-center p-3 rounded-md border-2 border-gray-200 bg-[#313131]">
+    <Image src={svg} alt='io'  />
+</div>
