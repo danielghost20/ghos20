@@ -3,7 +3,8 @@ interface Props {
   title: string;
 }
 
-import Icon, { Sprite } from "astro-icon";
+import { Image } from 'astro:assets';
+import arrow from '../icons/arrow.svg'
 
 const { title } = Astro.props;
 ---
@@ -34,17 +35,15 @@ const { title } = Astro.props;
         </li>
       </ul>
     </header>
-    <Sprite.Provider>
       <div>
         <slot />
         <footer class="text-white mt-5 max-w-3xl m-auto mb-10">
           <div class="mt-3 flex gap-4">
-            <a href="https://www.linkedin.com/in/daniel-ramos21/" class="flex gap-3  max-w-max items-center">Seguir linkedIn <Icon name="arrow" class="w-5 h-5" /></a>
-            <a href="mailto:daniel21develop@gmail.com" class="flex gap-3  max-w-max items-center">Enviar un correo <Icon name="arrow" class="w-5 h-5" /></a>
+            <a href="https://www.linkedin.com/in/daniel-ramos21/" class="flex gap-3  max-w-max items-center">Seguir linkedIn <Image src={arrow} alt='arrow-icon' class="w-5 h-5" /></a>
+            <a href="mailto:daniel21develop@gmail.com" class="flex gap-3  max-w-max items-center">Enviar un correo <Image src={arrow} alt='arrow-icon' class="w-5 h-5" /></a>
           </div>
         </footer>
       </div>
-    </Sprite.Provider>
   </body>
 </html>
 
