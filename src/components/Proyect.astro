@@ -11,9 +11,9 @@ import { Image } from 'astro:assets'
 const {title, content, link} = Astro.props
 ---
 
-<div class="w-full relative p-4 rounded-md bg-[#313131] border-2 border-gray-700 flex flex-col">
-        <h2 class="text-xl font-semibold text-gray-200">{title}</h2>
-        <p class="text-base font-semibold text-gray-500">{content}</p>
+<div class="w-full relative p-4 rounded-md bg-[#313131] border-[1px] border-zinc-600 flex flex-col">
+        <h2 class="text-lg font-medium text-gray-200">{title}</h2>
+        <p class="text-base  text-gray-400">{content}</p>
         <a href={link} target="_blank">
             <Image class="w-5 h-5 absolute right-2 top-2 hover:right-1 hover:top-1 duration-300"  src={arrow} alt='icon-arrow'/>
         </a>

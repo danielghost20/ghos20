@@ -1,56 +1,120 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import Proyect from '../components/Proyect.astro';
-import { Image } from 'astro:assets';
-import next from '../icons/next.svg'
-import node from '../icons/node.svg'
-import express from '../icons/express.svg'
-import prisma from '../icons/prisma.svg'
-import tailwind from '../icons/tailwindcss.svg'
-import typescript from '../icons/typescript.svg'
-import profile from '../../public/images/ghost.jpg'
-import nft from '../../public/images/nft.jpeg'
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Proyect from "../components/Proyect.astro";
+import profile from "../../public/images/ghost.jpg";
+import nft from "../../public/images/nft.jpeg";
+import { Icon } from "astro-icon/components";
 ---
 
 <Layout title="Daniel Ramos.">
-		<main class=" max-w-3xl m-auto w-full mt-10">
-							<h1 class="text-white w-full   font-semibold text-4xl">Hola, soy Daniel Ramos</h1>
-							<p class="text-lg text-gray-400 font-semibold mt-5">Soy un apasionado desarrollador web full stack con experiencia en la creación de aplicaciones web y móviles. Vivo en Oaxaca, México, y tengo 21 años. Estoy constantemente aprendiendo y explorando nuevas tecnologías.</p>
-							<div class="flex flex-wrap justify-start gap-2 mt-7">
-	
-								<div class="w-20 h-10 object-contain p-2 rounded-md border-2  border-gray-600 bg-[#313131]">
-									<Image src={next} alt='icon' class=' w-full object-cover h-full ' />
-								</div>
-								<div class="w-20 h-10 object-contain p-2 rounded-md border-2  border-gray-600 bg-[#313131]">
-									<Image src={node} alt='icon' class=' w-full object-cover h-full ' />
-								</div>
-								<div class="w-28 h-10 object-contain p-2 rounded-md border-2  border-gray-600 bg-[#313131]">
-									<Image src={tailwind} alt='icon' class=' w-full object-cover h-full ' />
-								</div>
-								<div class="w-20 h-10 object-contain p-2 rounded-md border-2  border-gray-600 bg-[#313131]">
-									<Image src={prisma} alt='icon' class=' w-full object-contain h-full ' />
-								</div>
-								<div class="w-20 h-10 object-contain p-2 rounded-md border-2  border-gray-600 bg-[#313131]">
-									<Image src={typescript} alt='icon' class=' w-full object-cover h-full ' />
-								</div>
-								<div class="w-20 h-10 object-contain p-2 rounded-md border-2  border-gray-600 bg-[#313131]">
-									<Image src={express} alt='icon' class=' w-full object-cover h-full ' />
-								</div>
-						</div>
-			<section class="mt-10">
-				<p class="text-lg text-gray-400 font-semibold">Como estudiante <span class="p-1 rounded-md bg-tx-primary text-white">autodidacta</span> he cultivado mi habilidad para desarrollar proyectos diversos centrados en el ámbito web, así como la creación de scripts para la automatización eficiente de tareas. Mi enfoque principal ha sido el desarrollo web, donde he adquirido experiencia significativa en la implementación de soluciones creativas y funcionales.</p>
-				<div class="mt-10 flex gap-4">
-					<Card image={profile} body='13 Repositorios' href='https://github.com/danielghost20' title='@Ghost21'/>
-					<Card image={nft} body='Más de 500 contactos' href='https://www.linkedin.com/in/daniel-ramos21/' title='daniel-ramos'/>
-				</div>
-				<p class="text-lg text-gray-400 font-semibold mt-10">Mi interés se extiende hacia la ciencia de datos, y tengo la intención de dedicar tiempo a estudios a largo plazo en este campo. Mi pasión por la tecnología y el aprendizaje autodidacta me ha permitido adquirir habilidades sólidas en programación, diseño web y gestión de datos.</p>
-				<h2 class="my-5 text-3xl font-semibold text-white">Algunos de mis recientes proyectos son:</h2>
-				<div class="flex flex-col gap-4 mt-10">
-					<Proyect content='Tienda virtual de venta de productos' link='https://next-store-dusky.vercel.app/' title='next-store'/>
-					<Proyect content='Web de componentes reutilizables para diferentes frameworks' link='https://nextjs-galery.vercel.app/' title='@next-galery'/>
-				</div>
-				<p class="text-lg text-gray-400 font-semibold my-6">He trabajado con empresas de desarrollo de software, en proyectos de codigo abierto para la comunidad y más.</p>
-			</section>
-		</main>
+  <main class="max-w-3xl m-auto w-full mt-10">
+    <h1 class="text-gray-200 w-full font-semibold text-2xl">
+      Hola, soy Daniel Ramos 👋
+    </h1>
+    <h2 class="mt-8 mb-4  text-zinc-200">Desarrollador web Full stack</h2>
+    <div class="flex flex-wrap justify-start items-center gap-4 mt-7">
+      <div
+        class="rounded-lg p-1 bg-[#262626] border-[.5px] items-center border-zinc-600 flex gap-2"
+      >
+        <Icon class="text-white" attributeName="next.js" name="next-js" />
+        <span class="text-gray-200 text-sm">next.js</span>
+      </div>
+      <div
+        class="rounded-lg p-1 bg-[#262626] border-[.5px] items-center border-zinc-600 flex gap-2"
+      >
+        <Icon class="text-white" attributeName="next.js" name="prisma" />
+        <span class="text-gray-200 text-sm">prisma</span>
+      </div>
+      <div
+        class="rounded-lg p-1 bg-[#262626] border-[.5px] items-center border-zinc-600 flex gap-2"
+      >
+        <Icon class="text-white" attributeName="react" name="react" />
+        <span class="text-gray-200 text-sm">react</span>
+      </div>
+      <div
+        class="rounded-lg p-1 bg-[#262626] border-[.5px] items-center border-zinc-600 flex gap-2"
+      >
+        <Icon
+          class="text-white"
+          attributeName="tailwindcss"
+          name="tailwindcss"
+        />
+        <span class="text-gray-200 text-sm">tailwindcss</span>
+      </div>
+      <div
+      class="rounded-lg p-1 bg-[#262626] border-[.5px] items-center border-zinc-600 flex gap-2"
+    >
+      <Icon class="text-white" attributeName="next.js" name="typescript" />
+      <span class="text-gray-200 text-sm">typescript</span>
+    </div>
+      <div
+      class="rounded-lg p-1 bg-[#262626] border-[.5px] items-center border-zinc-600 flex gap-2"
+    >
+      <Icon
+        class="text-white"
+        attributeName="node-js"
+        name="node"
+      />
+      <span class="text-gray-200 text-sm">node.js</span>
+    </div>
+
+    </div>
+    <p class="text-basec text-gray-300 mt-5">
+      Soy un apasionado desarrollador web full stack con experiencia en la
+      creación de aplicaciones web y móviles. Vivo en Oaxaca, México, y tengo 21
+      años. Estoy constantemente aprendiendo y explorando nuevas tecnologías.
+    </p>
+
+    <section class="mt-10 text-gray-300 mb-5">
+      <p>
+        Como estudiante <span id="neonText" class="p-1 rounded-md neon-text"
+          >autodidacta</span
+        > he cultivado mi habilidad para desarrollar proyectos diversos centrados
+        en el ámbito web, así como la creación de scripts para la automatización
+        eficiente de tareas. Mi enfoque principal ha sido el desarrollo web, donde
+        he adquirido experiencia significativa en la implementación de soluciones
+        creativas y funcionales.
+      </p>
+      <div class="mt-10 flex gap-4">
+        <Card
+          image={profile}
+          body="13 Repositorios"
+          href="https://github.com/danielghost20"
+          title="@Ghost"
+        />
+        <Card
+          image={nft}
+          body="Más de 500 contactos"
+          href="https://www.linkedin.com/in/daniel-ramos21/"
+          title="Daniel Ramos"
+        />
+      </div>
+      <p class="mt-10">
+        Mi interés se extiende hacia la ciencia de datos, y tengo la intención
+        de dedicar tiempo a estudios a largo plazo en este campo. Mi pasión por
+        la tecnología y el aprendizaje autodidacta me ha permitido adquirir
+        habilidades sólidas en programación, diseño web y gestión de datos.
+      </p>
+      <h2 class="my-5 text-3xl">Algunos de mis recientes proyectos son:</h2>
+      <div class="flex flex-col gap-4 mt-10">
+		  <Proyect
+			content="Plataforma de streaming"
+			link="https://next-streaming-ghost.vercel.app/"
+			title="ghost-stream"
+		  />
+        <Proyect
+          content="Tienda virtual de venta de productos"
+          link="https://next-store-dusky.vercel.app/"
+          title="next-store"
+        />
+      </div>
+    </section>
+  </main>
 </Layout>
+
+<style>
+  .neon-text {
+    text-shadow: 0 0 10px #00ffea, 0 0 20px #11af8d, 0 0 30px #11bed4;
+  }
+</style>
